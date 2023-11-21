@@ -1,0 +1,13 @@
+<div class="orders">
+  <div ng-repeat="order in orders" class="order">
+    <div class="order-icon"><img ng-src="../content/img/orderIcon.png" /></div>
+    <div class="order-number">{{order}}</div>
+    <div class="details-icon" ng-click="openOrderModal(order)">
+      <img ng-src="../content/img/detailsIcon.png" />
+    </div>
+  </div>
+  <div ng-if="!orders.length > 0" class="empty-message">No Order To Show</div>
+</div>
+
+<order-details order="order" closeModal="openModal" ng-show="openModal">
+</order-details>

@@ -1,0 +1,275 @@
+body{
+    background-image: url('../img/large_bgi.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width:1280px;
+    margin: auto;
+    height: 100vh;
+    font-family: cursive;
+}
+
+main{
+    width: 70%;
+    min-height: 30%;
+    background-color: #00000059;
+    border-radius: 7px;
+}
+
+footer{
+    display: flex;
+    flex-direction: row;
+}
+
+.main-title{
+    color: white;
+    font-size: 44px;
+}
+
+.menu-boxs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.menu-box{
+    display: inherit;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    background-color: white;
+    border-radius: 17px;
+    margin-right: 15px;
+    font-size: 24px;
+}
+.menu-box:last-child{
+    margin-right: 0px;
+}
+
+.about{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 15px 25px;
+    text-align: justify;
+}
+
+.about-title{
+    color: #ed1c24;
+    font-size: 20px;
+
+}
+.about-content{
+    font-size: 18px;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+}
+.home-content{
+    color: white;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.home-image img{
+    width: 220px;
+    height: 100px;
+}
+
+.orders{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+
+}
+
+.order{
+    width: 21%;
+    height: auto;
+    display: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    margin-right: 2%;
+    margin-left: 2%;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    border:10px solid inherit;
+    box-sizing: border-box;
+    padding: 7px 12px;
+}
+
+.order-icon{
+    width: 25px;
+    height: 25px;
+}
+
+.order-icon img{
+    width: 100%;
+}
+
+.details-icon{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.details-icon img{
+    width: 100%;
+}
+
+.empty-message{
+    color: #d00d1b;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 50%;
+    min-height: 500px;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
+
+  .modal-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 35px;
+    justify-content: space-between;
+    border-bottom: #333 1px solid;
+  }
+
+  .modal-title{
+    font-size: 22px;
+    color: #000000;
+    font-weight: bold;
+
+  }
+  .order-id-title{
+    color: #ed1c24;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+  }
+
+  .close-btn {
+    cursor: pointer;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+    top: 10px;
+    right: 10px;
+}
+
+.customer-data{
+    color: #333333;
+    font-size: 16px;
+    padding-bottom: 7px;
+    border-bottom: 1px #4b4949 solid;
+
+}
+
+.tracking-number{
+    color: #cccccc;
+}
+
+
+.address-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    color: #000000;
+    margin: 10px 0px;
+    padding-bottom: 7px;
+    border-bottom: 1px #cccccc solid;
+}
+
+.shipping-address-data{
+    width: 50%;
+    box-sizing: border-box;
+
+}
+
+.title{
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: 1px solid #cccccc;
+}
+.items-title{
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 7px;
+    margin-top: 10px;
+}
+
+.payment-info-data{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.payment-method,.payment-status{
+    width: 33%;
+}
+
+.order-items{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.order-item{
+    width: 29%;
+    padding: 2%;
+    box-shadow: 0px 0px 6px 2px #cccccc;
+    font-size: 13px;
+}
+
+.invoice-info{
+    margin-top: 10px;
+    margin-bottom: 15px;
+}

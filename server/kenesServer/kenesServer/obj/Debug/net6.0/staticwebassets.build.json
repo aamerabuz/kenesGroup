@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "4fH86aSGPdntttdXqebiX1Z6u+Gc4fGyLw++74tr3Gk=",
+  "Source": "kenesServer",
+  "BasePath": "_content/kenesServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

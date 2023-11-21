@@ -1,0 +1,73 @@
+<div id="myModal" class="modal">
+  <div class="modal-header">
+    <div class="modal-title">
+      Order Details, {{orderDetails.order_date | date}}
+    </div>
+    <div class="close-btn-border">
+      <span class="close-btn" ng-click="closeOrderModal()">&times;</span>
+    </div>
+  </div>
+  <div class="modal-content">
+    <div class="order_data">
+        <div class="order_id_data">Order #{{orderDetails.order_id}} ( {{orderDetails.order_status}} )</div>
+        <div class="tracking-number">Tracking Number: {{orderDetails.tracking_number}}</div>
+        <div class="customer-data">
+            <div class="customer-id">Customer ID: {{orderDetails.customer.customer_id}}</div>
+            <div class="customer-full-name">Name:  {{orderDetails.customer.first_name}} {{orderDetails.customer.last_name}}</div>
+            <div class="customer-contact-info">Info:  {{orderDetails.customer.email}} , tel: {{orderDetails.customer.phone}}</div>
+        </div>
+        <div class="items-title">Items ( {{orderDetails.items.length}} )</div>
+        <div class="order-items">
+            
+            <div class="order-item" ng-repeat="item in orderDetails.items">
+                <div class="item-id"><strong>Id</strong> {{item.item_id}}</div>
+                <div class="item-description"><strong>Description </strong> {{item.description}}</div>
+                <div class="item-quantity"><strong>Quantity </strong> {{item.quantity}}</div>
+                <div class="item-price_per_unit"><strong>Price Per Unit </strong> {{item.price_per_unit}}</div>
+                <div class="item-total_price"><strong>Item Total Price </strong> {{item.total_price}}</div>
+            </div>
+        </div>
+        <div class="address-data">
+            <div class="shipping-address-data">
+                <div class="shipping-address-title title">Shipping Address</div>
+                <div class="shipping-address-street">street: {{orderDetails.shipping_address.street}}</div>
+                <div class="shipping-address-city">city:  {{orderDetails.shipping_address.city}}</div>
+                <div class="shipping-address-state">state:  {{orderDetails.shipping_address.state}}</div>
+                <div class="shipping-address-postal_code">postal code:  {{orderDetails.shipping_address.postal_code}}</div>
+                <div class="shipping-address-country">country:  {{orderDetails.shipping_address.country}}</div>
+            </div>
+            <div class="billing-address-data">
+                <div class="billing-address-title title">Billing Address</div>
+                <div class="billing-address-street">street: {{orderDetails.billing_address.street}}</div>
+                <div class="billing-address-city">city:  {{orderDetails.billing_address.city}}</div>
+                <div class="billing-address-state">state:  {{orderDetails.billing_address.state}}</div>
+                <div class="billing-address-postal_code">postal code:  {{orderDetails.billing_address.postal_code}}</div>
+                <div class="billing-address-country">country:  {{orderDetails.billing_address.country}}</div>
+            </div>
+        </div>
+        <div class="payment-info-data">
+            <div class="payment-method">
+                <strong>Payment method:</strong> {{orderDetails.payment_info.payment_method}}
+            </div>
+            <div class="payment-status">
+                <strong>Payment status:</strong> {{orderDetails.payment_info.payment_status}}
+            </div>
+            <div class="payment-status">
+                <strong>Shipping method:</strong> {{orderDetails.shipping_method}}
+            </div>
+        </div>
+        <div class="invoice-info">
+            <div class="subtotal">Subtotal: {{orderDetails.subtotal}}</div>
+            <div class="tax">Tax: {{orderDetails.tax}}</div>
+            <div class="shipping_cost">Shipping cost: {{orderDetails.shipping_cost}}</div>
+            <div class="total">Total: {{orderDetails.total | currency:orderDetails.currency}}</div>
+        </div>
+        <div class="notes">
+            <strong>Notes:</strong> {{orderDetails.notes}}
+        </div>
+
+
+    </div>
+  </div>
+</div>
+<div class="overlay" ng-click="closeOrderModal()"></div>
